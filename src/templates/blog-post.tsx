@@ -5,14 +5,46 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
-  location,
-}) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+interface Props {
+  data: {
+    markdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+    previous: {
+      fields: {
+        slug: string
+      }
+      frontmatter: {
+        title: string
+      }
+    }
+    next: {
+      fields: {
+        slug: string
+      }
+      frontmatter: {
+        title: string
+      }
+    }
+  }
+  pageContext?: any
+  location?: any
+}
+
+const BlogPostTemplate = ({ data, location }: Props) => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Seo
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
       <article
         className="blog-post"
         itemScope
@@ -58,15 +90,6 @@ const BlogPostTemplate = ({
         </ul>
       </nav>
     </Layout>
-  )
-}
-
-export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
   )
 }
 
