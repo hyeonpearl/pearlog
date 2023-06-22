@@ -44,10 +44,16 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <Link to={"/about"}>@최현철</Link>
-          {` `}
+          <span>
+            Written by <Link to={"/about"}>@최현철</Link>
+          </span>
           <div className="bio-link">
-            <a href={`https://github.com/${social?.github || ``}`}>Github</a>
+            <a
+              href={`https://github.com/${social?.github || ``}`}
+              target="_blank"
+            >
+              Github
+            </a>
           </div>
         </p>
       )}
