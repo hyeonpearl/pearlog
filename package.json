@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "pearlog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Hyeoncheol Choi Tech Blog since 2023",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hyeoncheol Choi <hc9064@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
