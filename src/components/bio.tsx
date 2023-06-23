@@ -36,7 +36,7 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/simba.png"
+        src="../images/profile.jpeg"
         width={50}
         height={50}
         quality={95}
@@ -44,17 +44,12 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
+          <span>디자인에 관심이 많은 개발자</span>
           <span>
-            Written by <Link to={"/about"}>@최현철</Link>
+            <Link to={"/about"} className="bio-about">
+              @최현철
+            </Link>
           </span>
-          <div className="bio-link">
-            <a
-              href={`https://github.com/${social?.github || ``}`}
-              target="_blank"
-            >
-              Github
-            </a>
-          </div>
         </p>
       )}
     </div>

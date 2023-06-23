@@ -1,4 +1,5 @@
 /* CSS Custom Properties Definitions */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 :root {
   --maxWidth-none: "none";
@@ -27,14 +28,6 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Pretendard, -apple-system, BlinkMacSystemFont,
-    Bazier Square, Noto Sans KR, Segoe UI, Apple SD Gothic Neo, Roboto,
-    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
   --fontWeight-black: 900;
@@ -52,7 +45,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #3e74ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -66,6 +59,7 @@
 :after,
 :before {
   box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 html {
@@ -76,7 +70,6 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
@@ -99,7 +92,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
@@ -139,20 +131,6 @@ h5 {
 
 h6 {
   font-size: var(--fontSize-1);
-}
-
-h1 > a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Prose */
@@ -234,7 +212,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-text-light);
+  text-decoration: underline;
 }
 
 /* Custom classes */
@@ -251,6 +229,55 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-link-home {
+  color: var(--color-text);
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-4);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.header-link-home > strong {
+  color: var(--color-primary);
+  transition: all 0.3s;
+}
+
+.header-link-home:hover,
+.header-link-home:focus {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.header-link-home:hover > strong,
+.header-link-home:focus > strong {
+  color: var(--color-text);
+}
+
+.header-link-github {
+  color: var(--color-text);
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-3);
+}
+
+.header-link-github:hover,
+.header-link-github:focus {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.global-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(243, 244, 246);
 }
 
 .main-heading {
@@ -278,20 +305,20 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
-.header-link-home {
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
-  text-decoration: none;
-  font-size: var(--fontSize-2);
-}
-
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
 }
 
 .bio p {
+  display: flex;
+  flex-direction: column;
   margin-bottom: var(--spacing-0);
+}
+
+.bio p span {
+  font-weight: var(--fontWeight-bold);
+  padding: var(--spacing-1);
 }
 
 .bio-avatar {
@@ -299,6 +326,22 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
+}
+
+.bio-about {
+  color: white;
+  background: var(--color-primary);
+  padding: var(--spacing-2);
+  border-radius: 10px;
+  font-weight: var(--fontWeight-bold);
+  transition: all 0.3s;
+}
+
+.bio-about:hover,
+.bio-about:focus {
+  color: var(--color-primary);
+  background: white;
+  text-decoration: none;
 }
 
 .blog-post header h1 {
