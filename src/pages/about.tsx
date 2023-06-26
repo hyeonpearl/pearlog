@@ -5,7 +5,8 @@ const About = () => {
   return (
     <>
       <Seo title="About" />
-      <div>최현철의 이력서</div>
+
+      <div className="global-wrapper">작성 중입니다.</div>
     </>
   )
 }
