@@ -1,5 +1,5 @@
 ---
-title: React, 도대체 왜 쓰는 거야?
+title: React, 왜 쓰는 걸까?
 date: "2023-06-20"
 description: "React를 사용하는 이유와 특징들."
 ---

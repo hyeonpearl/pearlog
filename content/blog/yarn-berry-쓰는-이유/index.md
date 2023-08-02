@@ -1,14 +1,12 @@
 ---
-title: Yarn Berry? Plug'n'Play? Zero Install?
+title: node_modules의 구원자, Yarn Berry
 date: "2023-06-27"
 description: "Yarn Berry가 무엇인지 알아보자."
 ---
 
-4월부터 계획한 사이드 프로젝트를 진행 중에 코드나 디자인, 설계가 맘에 들지 않았고 그 와중에 Next.js 13 stable 버전이 나왔길래 프로젝트를 엎기로 했다. 그러면서 내 눈에 띈 것이 있는데 그게 바로 Yarn berry였고 한 번 도입해보는 것도 괜찮겠다 싶어 블로그를 통해 공유해보고자 한다.
-
 # Yarn Berry란?
 
-Yarn Berry는 Node.js를 위한 새로운 패키지 매니저로, 기존 NPM 패키지 매니저의 문제점을 개선하고자 만들어졌다. 현재 소스코드는 [yarnpkg/berry](https://github.com/yarnpkg/berry) 에서 관리되고 있으니 궁금하신 분들은 확인해보시길 바란다.
+Yarn Berry는 Node.js를 위한 새로운 패키지 매니저로, 기존 NPM 패키지 매니저의 문제점을 개선하고자 만들어졌다. 현재 소스코드는 [yarnpkg/berry](https://github.com/yarnpkg/berry) 에서 관리되고 있으니 궁금하다면 확인해보시길 바란다.
 
 # NPM의 문제점
 
