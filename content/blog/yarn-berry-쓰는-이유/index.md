@@ -1,5 +1,5 @@
 ---
-title: node_modules의 구원자, Yarn Berry
+title: Yarn Berry가 도대체 뭐길래
 date: "2023-06-27"
 description: "Yarn Berry가 무엇인지 알아보자."
 ---
