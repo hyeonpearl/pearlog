@@ -10,7 +10,7 @@ description: "첫 프로젝트를 마치며."
 
 장보고는 공공데이터를 활용하여 제작한 서울시 식자재 최저가 비교 웹앱이다.
 
-<a href="https://github.com/SBSun/jangbogoProject" target="_blank">Github</a> | <a href="http://52.78.59.168:8080/" target="_blank">장보고 - 바로가기</a>
+<a href="https://github.com/SBSun/jangbogoProject" target="_blank">Github Repo</a>
 
 ## 기획
 
