@@ -44,7 +44,7 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          <span>디자인에 관심이 많은 개발자</span>
+          <span>프론드엔드 초보 개발자</span>
           <span>
             <Link to={"/about"} className="bio-about">
               @최현철
