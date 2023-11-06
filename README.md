@@ -4,12 +4,12 @@
 
 ## Commit rules
 
-- Commit message: [형식] 글 제목
+- Commit message: [형식] 글, 파일 이름 / 상세 설명
 
 - 형식 예시
-  - [POST] : 포스팅
-  - [EDIT] : 게시글, README 수정
+  - [POST] : 게시글 포스팅
+  - [EDIT] : 파일 및 문서 수정
   - [CHORE] : 라이브러리 설치 등 기타 작업
-  - [DELETE] : 게시글 삭제
+  - [DELETE] : 파일 삭제
 
 ### Template by [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)
