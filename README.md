@@ -9,6 +9,7 @@
 - 형식 예시
   - [POST] : 포스팅
   - [EDIT] : 게시글, README 수정
+  - [CHORE] : 라이브러리 설치 등 기타 작업
   - [DELETE] : 게시글 삭제
 
 ### Template by [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)
