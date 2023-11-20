@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -24,11 +24,11 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
+  const author = data.site.siteMetadata?.author;
+  const social = data.site.siteMetadata?.social;
 
   return (
     <div className="bio">
@@ -46,14 +46,19 @@ const Bio = () => {
         <p>
           <span>프론드엔드 초보 개발자</span>
           <span>
-            <Link to={"/about"} className="bio-about">
+            <a
+              href={
+                "https://www.rallit.com/resumes/1195248@hyeoncheol.contact/%EC%B5%9C%ED%98%84%EC%B2%A0?theme=STANDARD"
+              }
+              className="bio-about"
+            >
               @최현철
-            </Link>
+            </a>
           </span>
         </p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;
