@@ -45,7 +45,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #3e74ff;
+  --color-primary: #01cdaa;
   --color-secondary: #00d2ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -219,7 +219,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: var(--color-secondary);
+  color: var(--color-heading);
 }
 
 /* Custom classes */
