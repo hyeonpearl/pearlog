@@ -44,7 +44,7 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          <span>프론드엔드 초보 개발자</span>
+          <span>프론드엔드 개발자</span>
           <span>
             <a
               href={
