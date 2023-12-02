@@ -211,7 +211,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--color-heading);
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -219,7 +219,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: var(--color-heading);
+  color: var(--color-primary);
 }
 
 /* Custom classes */
