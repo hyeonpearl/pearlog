@@ -1,17 +1,17 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 interface Props {
-  location: Location
-  title: string
-  children?: any
+  location: Location;
+  title: string;
+  children?: any;
 }
 
 const Layout = ({ location, title, children }: Props) => {
-  const rootPath = `/blog`
-  const isRootPath = location.pathname === rootPath
-  let header
+  const rootPath = `/blog`;
+  const isRootPath = location.pathname === rootPath;
+  let header;
 
   if (isRootPath) {
     header = (
@@ -29,7 +29,7 @@ const Layout = ({ location, title, children }: Props) => {
           Github
         </a>
       </>
-    )
+    );
   } else {
     header = (
       <>
@@ -44,7 +44,7 @@ const Layout = ({ location, title, children }: Props) => {
           Github
         </a>
       </>
-    )
+    );
   }
 
   return (
@@ -57,7 +57,7 @@ const Layout = ({ location, title, children }: Props) => {
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

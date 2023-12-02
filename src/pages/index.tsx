@@ -1,25 +1,25 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 interface Props {
   data: {
-    allMarkdownRemark: any
+    allMarkdownRemark: any;
     site: {
       siteMetadata: {
-        title: string
-      }
-    }
-  }
-  location?: any
+        title: string;
+      };
+    };
+  };
+  location?: any;
 }
 
 const BlogIndex = ({ data, location }: Props) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -28,7 +28,7 @@ const BlogIndex = ({ data, location }: Props) => {
         <Bio />
         <p>현재 게시물이 없습니다.</p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -37,7 +37,7 @@ const BlogIndex = ({ data, location }: Props) => {
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post: any) => {
-          const title = post.frontmatter.title || post.fields.slug
+          const title = post.frontmatter.title || post.fields.slug;
 
           return (
             <li key={post.fields.slug}>
@@ -64,14 +64,14 @@ const BlogIndex = ({ data, location }: Props) => {
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -94,4 +94,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

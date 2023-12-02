@@ -1,43 +1,43 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 interface Props {
   data: {
-    markdownRemark: any
+    markdownRemark: any;
     site: {
       siteMetadata: {
-        title: string
-      }
-    }
+        title: string;
+      };
+    };
     previous: {
       fields: {
-        slug: string
-      }
+        slug: string;
+      };
       frontmatter: {
-        title: string
-      }
-    }
+        title: string;
+      };
+    };
     next: {
       fields: {
-        slug: string
-      }
+        slug: string;
+      };
       frontmatter: {
-        title: string
-      }
-    }
-  }
-  pageContext?: any
-  location?: any
+        title: string;
+      };
+    };
+  };
+  pageContext?: any;
+  location?: any;
 }
 
 const BlogPostTemplate = ({ data, location }: Props) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -90,10 +90,10 @@ const BlogPostTemplate = ({ data, location }: Props) => {
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -133,4 +133,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

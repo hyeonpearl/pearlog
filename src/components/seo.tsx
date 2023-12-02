@@ -5,22 +5,22 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 interface Props {
-  description?: string
-  lang?: string
-  meta?: []
-  title: string
+  description?: string;
+  lang?: string;
+  meta?: [];
+  title: string;
 }
 
 interface Meta {
-  property?: string
-  name?: string
-  content: string
+  property?: string;
+  name?: string;
+  content: string;
 }
 
 const Seo = ({ description, lang, meta, title }: Props) => {
@@ -38,17 +38,17 @@ const Seo = ({ description, lang, meta, title }: Props) => {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
-  let typeSafeMeta: Array<Meta>
+  let typeSafeMeta: Array<Meta>;
 
   if (meta instanceof Array) {
-    typeSafeMeta = meta
+    typeSafeMeta = meta;
   } else {
-    typeSafeMeta = []
+    typeSafeMeta = [];
   }
 
   return (
@@ -94,20 +94,20 @@ const Seo = ({ description, lang, meta, title }: Props) => {
         ...typeSafeMeta,
       ]}
     />
-  )
-}
+  );
+};
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default Seo
+export default Seo;
