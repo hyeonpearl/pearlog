@@ -18,7 +18,9 @@ JavaScript는 객체에서 프로퍼티를 읽으려고 할 때 해당 프로퍼
 
 간단한 예시를 들어볼까요?
 
-```javascript
+![](./code1.png)
+
+<!-- ```javascript
 let person = {
   eats: true,
 };
@@ -31,7 +33,7 @@ console.log(choi.eats); // false
 choi.__proto__ = choi;
 
 console.log(choi.eats); // true
-```
+``` -->
 
 위 예시를 보면 `choi` 내에는 `eats`가 없지만 `__proto__`로 `choi`의 `Prototype`을 `person`로 지정하니 `choi.eats`가 `true`가 되었습니다.
 
@@ -51,7 +53,9 @@ console.log(choi.eats); // true
 
 클래스는 객체를 찍어내는 틀이라고 볼 수 있습니다. JavaScript에서도 class 문법이 존재합니다만, 실제로 실행되는 코드는 클래스가 아닌 함수입니다.
 
-```javascript
+![](./code2.png)
+
+<!-- ```javascript
 // class 문법
 class Person {
   constructor(name) {
@@ -71,7 +75,7 @@ function Person(name) {
 }
 
 const choi = new Person("choi");
-```
+``` -->
 
 함수 구조가 참 이상한데요. 클래스가 아니라면 return이 없는데 객체가 어떻게 생성되는 걸까요?
 
@@ -100,11 +104,13 @@ const choi = new Person("choi");
 
 객체는 자신의 원형(프로토타입)이라고 할 수 있는 객체가 있다면 그 객체를 가리키는 `__proto__` 링크를 자동으로 가지게 됩니다.
 
-```javascript
+![](./code3.png)
+
+<!-- ```javascript
 const newObj = Object.create(oldObj);
 
 newObj.__proto__ === oldObj;
-```
+``` -->
 
 2. **일반적인 객체가 아닌 함수 객체인 경우**
 
@@ -112,13 +118,15 @@ newObj.__proto__ === oldObj;
 
 예를 들어보자면,
 
-```javascript
+![](./code4.png)
+
+<!-- ```javascript
 function Person(name, first, second) {
   this.name = name;
   this.first = first;
   this.second = second;
 }
-```
+``` -->
 
 위와 같이 객체를 선언하면 `Person` 객체만 생성되는 것이 아닌 `Person's 프로토타입` 객체도 같이 생성됩니다. `Person` 객체의 `Prototype` 프로퍼티는 `Person's 프로토타입` 객체를 가리키고 `Person's 프로토타입` 객체의 `constructor` 프로퍼티는 `Person` 객체를 가리키는 것이죠.
 
@@ -134,7 +142,9 @@ function Person(name, first, second) {
 
 코드로 예를 들어볼게요.
 
-```javascript
+![](./code5.png)
+
+<!-- ```javascript
 function sayHello() {
   console.log(`${this.name} : Hello`);
 }
@@ -146,11 +156,13 @@ function Person(name) {
 const choi = new Person("choi");
 
 choi.sayHello(); // Type Error
-```
+``` -->
 
 위와 같이 코드를 짜면 당연히 에러가 발생합니다. `choi`에는 `sayHello`가 없기 때문이죠. 하지만 한 줄만 추가하면 에러가 해결됩니다.
 
-```javascript
+![](./code6.png)
+
+<!-- ```javascript
 function sayHello() {
   console.log(`${this.name} : Hello`);
 }
@@ -164,7 +176,7 @@ Person.프로토타입.sayHello = sayHello;
 const choi = new Person("choi");
 
 choi.sayHello(); // choi : Hello
-```
+``` -->
 
 분명 `Person` 객체의 `sayHello` 메소드를 추가했는데 `choi` 객체에서도 접근이 가능한 신기한 일이 발생하는데요. 이게 바로 프로토타입 체이닝입니다. 프로토타입 Chaing은 한 문장으로 정리하자면 **`__proto__`를 따라 계속 탐색하는 것**이라 할 수 있습니다.
 

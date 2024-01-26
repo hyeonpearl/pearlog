@@ -46,7 +46,9 @@ description: "복잡도에 대해 이해하고 코드에 적용해보며 느낀 
 
 아래는 Tweet을 게시하는 훅입니다.
 
-```typescript
+![](./code1.png)
+
+<!-- ```typescript
 export default function usePostTweet() {
   const [isLoading, setIsLoading] = useState(false);
   const [tweet, setTweet] = useState("");
@@ -109,7 +111,7 @@ export default function usePostTweet() {
     handleSubmit,
   };
 }
-```
+``` -->
 
 주어진 컴포넌트를 한 번 분석해보겠습니다.
 
@@ -125,7 +127,9 @@ export default function usePostTweet() {
 
 그럼 이제 계산 카테고리를 컴포넌트 바깥으로 분리해보겠습니다.
 
-```typescript
+![](./code2.png)
+
+<!-- ```typescript
 // 계산 파트 분리
 const validateFileSize = (file: File | null) => {
   if (file && file.size > 1024 * 1024) {
@@ -200,7 +204,7 @@ export default function usePostTweet() {
     handleSubmit,
   };
 }
-```
+``` -->
 
 계산 카테고리에 있는 코드들은 컴포넌트 밖으로 분리해보았습니다. `validateFileSize` 덕분에 `useEffect`를 사용하지 않아도 작동하는 모습입니다. 또한 `formatTweetDate`를 사용하여 가독성이 더욱 좋아졌습니다.
 
