@@ -1,7 +1,7 @@
 ---
 title: 프로토타입 자세히 알아보기
 date: "2023-11-09"
-description: "JavaScript를 공부할 때 누구나 한 번 쯤 들어보는 프로토타입에 대하여 알아봅시다."
+description: "JavaScript를 공부할 때 누구나 한 번 쯤 들어보는 프로토타입에 대하여 알아봅니다."
 ---
 
 ![](thumb.jpeg)
