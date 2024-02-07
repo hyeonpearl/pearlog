@@ -4,6 +4,8 @@ date: "2023-11-09"
 description: "JavaScript를 공부할 때 누구나 한 번 쯤 들어보는 프로토타입에 대하여 알아봅시다."
 ---
 
+![](thumb.jpeg)
+
 JavaScript로 개발할 때, `console.log`를 많이 사용하시죠? JavaScript에서 객체를 콘솔에 찍어보면 `[[Prototype]]`이라는 프로퍼티가 존재합니다. 개발자가 추가하지 않은 이 프로퍼티는 대체 무엇일까요?
 
 ![](./image1.png)
