@@ -2,12 +2,10 @@
 
 저의 개발 관련 기록들을 비정기적으로 공유합니다. 주로 프론트엔드 개발에 대한 내용을 다룹니다.
 
-## Tech Stack
-
-- TypeScript
-- React
-- Gatsby
-- Netlify
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white)](https://react.dev/)
+[![Gatsby](https://img.shields.io/badge/Gatsby-663399?style=flat&logo=Gatsby&logoColor=white)]([https://react.dev/](https://www.gatsbyjs.com/))
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=Netlify&logoColor=white)]([https://react.dev/](https://www.netlify.com/))
 
 ## License
 
